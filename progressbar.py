@@ -8,7 +8,7 @@ class progressbar():
         begin_time = self.begin_time
 
         if begin_time != 0:
-            eta = ((time.clock()-begin_time)/i)*iterations
+            eta = ((time.clock()-begin_time)/i)*iterations-i
             percent = 0.
             percent = float(i)/iterations*100
             bar = '|'+('#'*(int(percent)/2))+(' '*(50-(int(percent)/2)))+'|'
