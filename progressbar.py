@@ -14,8 +14,5 @@ class progressbar():
             bar = '|'+('#'*(int(percent)/2))+(' '*(50-(int(percent)/2)))+'|'
             print bar+' %d'%i+"\t"+'%.2f'%percent+'%'+'\t'+'ETA: '+'%.4f'%eta+'s'
 
-
-        begin_time = time.clock()
-
-
-        self.begin_time = begin_time
+        if begin_time == 0:
+            self.begin_time = time.clock()
